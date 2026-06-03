@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Tutorial Laravel - www.malasngoding.com</title>
+    <title>5026241203 Izzana Firdaunnisa</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -12,12 +13,20 @@
 
 <body>
 
- <div class="container">
-	<h3>www.malasngoding.com</h3>
-	<p>Seri Tutorial Laravel Lengkap Dari Dasar</p>
-	<p>Ini adalah view blog. ada di route blog.</p>
- </div>
+    <div class="container">
+    <!-- Header halaman-->
+    <div class="jumbotron">
+        <h1 class="display-3">Jumbo heading</h1>
+        <p class="lead">Jumbo helper text</p>
+        <hr class="my-2">
+        <p>More info</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+        </p>
+    </div>
+    </div>
+
+    </div>
 
 </body>
 </html>
-
