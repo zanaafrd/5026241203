@@ -32,6 +32,9 @@
                     <a class="nav-link disabled" href="#">Latihan 1</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" href="/nilaisiswa">Nilai Siswa</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link disabled" href="#">Latihan 2</a>
                 </li>
                 <li class="nav-item">

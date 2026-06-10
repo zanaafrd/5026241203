@@ -62,3 +62,12 @@ Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari',[PegawaiDBController::class, 'cari']);
+
+
+//nilai kuliah
+Route::get('/nilaisiswa', [NilaikuliahController::class, 'index'])->name('nilaisiswa.menu');
+Route::get('/nilaisiswa/tambah', [NilaikuliahController::class, 'tambah']);
+Route::post('/nilaisiswa/store', [NilaikuliahController::class, 'store']);
+Route::get('/nilaisiswa/edit/{id}', [NilaikuliahController::class, 'edit']);
+Route::post('/nilaisiswa/update', [NilaikuliahController::class, 'update']);
+Route::get('/nilaisiswa/hapus/{id}', [NilaikuliahController::class, 'hapus']);
