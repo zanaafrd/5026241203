@@ -28,14 +28,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Siswa</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Latihan 1</a>
+               <li class="nav-item">
+                    <a class="nav-link" href="{{ route('nilaikuliah.indexnilaikuliah') }}">Nilai Kuliah</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="/nilaisiswa">Nilai Siswa</a>
+                    <a class="nav-link" href="{{ route('keranjangbelanja.index') }}">Keranjang Belanja</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Latihan 2</a>
+                    <a class="nav-link disabled" href="#">Sirup</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">EAS</a>

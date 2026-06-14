@@ -48,6 +48,6 @@ class KeranjangBelanjaController extends Controller
         DB::table('keranjangbelanja')->where('ID', $id)->delete();
 
         // Redirect ke halaman index keranjangbelanja
-        //return redirect()->route('keranjangbelanja.index')->with('success', 'Pembelian berhasil dibatalkan.');
+        return redirect()->route('keranjangbelanja.index')->with('success', 'Pembelian berhasil dibatalkan.');
     }
 }

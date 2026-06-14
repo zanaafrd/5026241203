@@ -68,7 +68,7 @@
             }
 
 
-            //return true;
+            return true;
         }
     </script>
 @endsection

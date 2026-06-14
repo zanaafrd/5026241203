@@ -82,7 +82,7 @@ Route::get('/nilaisiswa/hapus/{id}', [NilaikuliahController::class, 'hapus']);
 
 //keranjang belanja
 // latihan 1
-//Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index'])->name('keranjangbelanja.index');
-//Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'create'])->name('keranjangbelanja.create');
-//Route::post('/keranjangbelanja', [KeranjangBelanjaController::class, 'store'])->name('keranjangbelanja.store');
-//Route::delete('/keranjangbelanja/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjangbelanja.destroy');
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index'])->name('keranjangbelanja.index');
+Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'create'])->name('keranjangbelanja.create');
+Route::post('/keranjangbelanja', [KeranjangBelanjaController::class, 'store'])->name('keranjangbelanja.store');
+Route::delete('/keranjangbelanja/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjangbelanja.destroy');
