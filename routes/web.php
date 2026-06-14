@@ -77,12 +77,10 @@ Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.
 
 
 //nilai kuliah
-Route::get('/nilaisiswa', [NilaikuliahController::class, 'index'])->name('nilaisiswa.menu');
-Route::get('/nilaisiswa/tambah', [NilaikuliahController::class, 'tambah']);
-Route::post('/nilaisiswa/store', [NilaikuliahController::class, 'store']);
-Route::get('/nilaisiswa/edit/{id}', [NilaikuliahController::class, 'edit']);
-Route::post('/nilaisiswa/update', [NilaikuliahController::class, 'update']);
-Route::get('/nilaisiswa/hapus/{id}', [NilaikuliahController::class, 'hapus']);
+// latihan 2 - route Nilai Kuliah
+Route::get('/nilaikuliah', [NilaiKuliahController::class, 'indexnilaikuliah'])->name('nilaikuliah.indexnilaikuliah');
+Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'tambah'])->name('nilaikuliah.tambah');
+Route::post('/nilaikuliah/store', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');
 
 //keranjang belanja
 // latihan 1
