@@ -6,7 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
-use App\Http\Controllers\NilaikuliahController;
+use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\SirupController;
 
