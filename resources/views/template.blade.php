@@ -23,9 +23,6 @@
                     <a class="nav-link" href="/pegawai">Pegawai</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nama tabel PR</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="/siswa">Siswa</a>
                 </li>
                <li class="nav-item">
