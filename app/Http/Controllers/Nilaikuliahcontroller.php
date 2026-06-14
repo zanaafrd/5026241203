@@ -2,55 +2,50 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Nilaikuliah;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class NilaikuliahController extends Controller
+class NilaiKuliahController extends Controller
 {
-    public function index()
+    public function indexnilaikuliah()
     {
-        $data = Nilaikuliah::all();
-        return view('nilaisiswa', compact('data'));
+        // Mengirim data nilaikuliah ke view index
+        $nilaikuliah = DB::table('nilaikuliah')->get();
+        return view('nilaikuliah.indexnilaikuliah', ['nilaikuliah' => $nilaikuliah]);
     }
 
+    // Fungsi untuk menampilkan form tambah data
     public function tambah()
     {
-        return view('nilaisiswa_tambah');
+        return view('nilaikuliah.tambahnilaikuliah');
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'NRP'        => 'required|max:6',
-            'NilaiAngka' => 'required|integer|min:0|max:100',
-            'SKS'        => 'required|integer',
+        $nilaiAngka = $request->NilaiAngka;
+        $sks = $request->SKS;
+
+        // Hitung Nilai Huruf otomatis
+        if ($nilaiAngka <= 40) {
+            $nilaiHuruf = 'D';
+        } elseif ($nilaiAngka >= 41 && $nilaiAngka <= 60) {
+            $nilaiHuruf = 'C';
+        } elseif ($nilaiAngka >= 61 && $nilaiAngka <= 80) {
+            $nilaiHuruf = 'B';
+        } else {
+            $nilaiHuruf = 'A';
+        }
+
+        // Hitung Bobot otomatis
+        $bobot = $nilaiAngka * $sks;
+
+        // Simpan ke database
+        DB::table('nilaikuliah')->insert([
+            'NRP' => $request->NRP,
+            'NilaiAngka' => $nilaiAngka,
+            'SKS' => $sks,
         ]);
 
-        Nilaikuliah::create($request->only('NRP', 'NilaiAngka', 'SKS'));
-
-        return redirect('/nilaisiswa')->with('success', 'Data berhasil ditambah!');
-    }
-
-    public function edit($id)
-    {
-        $row = Nilaikuliah::findOrFail($id);
-        return view('nilaisiswa_edit', compact('row'));
-    }
-
-    public function update(Request $request)
-    {
-        Nilaikuliah::where('ID', $request->id)->update([
-            'NRP'        => $request->NRP,
-            'NilaiAngka' => $request->NilaiAngka,
-            'SKS'        => $request->SKS,
-        ]);
-
-        return redirect('/nilaisiswa')->with('success', 'Data berhasil diupdate!');
-    }
-
-    public function hapus($id)
-    {
-        Nilaikuliah::destroy($id);
-        return redirect('/nilaisiswa')->with('success', 'Data berhasil dihapus!');
+        return redirect('/nilaikuliah');
     }
 }
