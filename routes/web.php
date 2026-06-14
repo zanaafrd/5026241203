@@ -6,7 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
-use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\NilaikuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\SirupController;
 
@@ -78,9 +78,9 @@ Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.
 
 //nilai kuliah
 // latihan 2 - route Nilai Kuliah
-Route::get('/nilaikuliah', [NilaiKuliahController::class, 'indexnilaikuliah'])->name('nilaikuliah.indexnilaikuliah');
-Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'tambah'])->name('nilaikuliah.tambah');
-Route::post('/nilaikuliah/store', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');
+Route::get('/nilaikuliah', [NilaikuliahController::class, 'indexnilaikuliah'])->name('nilaikuliah.indexnilaikuliah');
+Route::get('/nilaikuliah/tambah', [NilaikuliahController::class, 'tambah'])->name('nilaikuliah.tambah');
+Route::post('/nilaikuliah/store', [NilaikuliahController::class, 'store'])->name('nilaikuliah.store');
 
 //keranjang belanja
 // latihan 1
