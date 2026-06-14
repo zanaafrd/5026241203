@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class NilaiKuliahController extends Controller
+class NilaikuliahController extends Controller
 {
     public function indexnilaikuliah()
     {

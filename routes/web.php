@@ -75,6 +75,14 @@ Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.e
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
 
+//sirup
+Route::get('/sirup', [SirupController::class, 'index'])->name('sirup.index');
+Route::get('/sirup/create', [SirupController::class, 'create'])->name('sirup.create');
+Route::post('/sirup', [SirupController::class, 'store'])->name('sirup.store');
+Route::get('/sirup/{id}/edit', [SirupController::class, 'edit'])->name('sirup.edit');
+Route::put('/sirup/{id}', [SirupController::class, 'update'])->name('sirup.update');
+Route::delete('/sirup/{id}', [SirupController::class, 'destroy'])->name('sirup.destroy');
+
 
 //nilai kuliah
 // latihan 2 - route Nilai Kuliah
@@ -88,3 +96,4 @@ Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index'])->n
 Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'create'])->name('keranjangbelanja.create');
 Route::post('/keranjangbelanja', [KeranjangBelanjaController::class, 'store'])->name('keranjangbelanja.store');
 Route::delete('/keranjangbelanja/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjangbelanja.destroy');
+
