@@ -26,7 +26,7 @@
                     <a class="nav-link" href="#">Nama tabel PR</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Siswa</a>
+                    <a class="nav-link" href="/siswa">Siswa</a>
                 </li>
                <li class="nav-item">
                     <a class="nav-link" href="{{ route('nilaikuliah.indexnilaikuliah') }}">Nilai Kuliah</a>
@@ -34,8 +34,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('keranjangbelanja.index') }}">Keranjang Belanja</a>
                 </li>
-                <li
-                    <a class="nav-link disabled" href="#">Sirup</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('sirup.index')}}">Sirup</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">EAS</a>
