@@ -34,6 +34,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('keranjangbelanja.index') }}">Keranjang Belanja</a>
                 </li>
+                <li
                     <a class="nav-link disabled" href="#">Sirup</a>
                 </li>
                 <li class="nav-item">
