@@ -22,7 +22,7 @@
 
         </tr>
 
-        @forelse($vga as $row)
+        @forelse($sirup as $row)
             <tr>
                 <td>{{ $row->kodesirup }}</td>
                 <td>{{ $row->merksirup }}</td>
