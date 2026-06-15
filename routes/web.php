@@ -9,6 +9,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\NilaikuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\SirupController;
+use App\Http\Controllers\NilaiPesertaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -97,3 +98,8 @@ Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'create
 Route::post('/keranjangbelanja', [KeranjangBelanjaController::class, 'store'])->name('keranjangbelanja.store');
 Route::delete('/keranjangbelanja/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjangbelanja.destroy');
 
+//nilai pesert
+//EAS
+Route::get('/nilaipeserta', [NilaiPesertaController::class, 'index'])->name('nilaipeserta.index');
+Route::get('/nilaipeserta/tambah', [NilaiPesertaController::class, 'tambah'])->name('nilaipeserta.create');
+Route::post('/nilaipeserta/store', [NilaiPesertaController::class, 'store'])->name('nilaipeserta.store');
