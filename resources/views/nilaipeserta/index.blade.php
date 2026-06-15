@@ -18,7 +18,7 @@
     @foreach ($nilaipeserta as $nm)
     <tr>
         <td>{{ $nm->ID }}</td>
-        <td>{{ $nm->NilaiPeserta }}</td>
+        <td>{{ $nm->NoPeserta }}</td>
         <td>{{ $nm->NilaiTeori }}</td>
         <td>{{ $nm->NilaiPraktek }}</td>
         <td>

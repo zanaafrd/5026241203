@@ -10,9 +10,13 @@ class NilaiPesertaController extends Controller
     public function index()
     {
         // Mengirim data nilaipeserta ke view index
-        $nilaikuliah = DB::table('nilai_peserta')->get();
-        return view('nilaipeserta.index', ['nilaipeserta' => $nilaipeserta]);
-    }
+        public function index()
+    $nilaipeserta = DB::table('nilaipeserta')->get();
+
+    return view('nilaipeserta.index', [
+        'nilaipeserta' => $nilaipeserta
+    ]);
+}
 
     // Fungsi untuk menampilkan form tambah data
     public function create()
@@ -36,7 +40,7 @@ class NilaiPesertaController extends Controller
         $rata_rata = ($NilaiTeori + $NilaiPraktek) / 2;
 
         // Simpan ke database
-        DB::table('nilai_peserta')->insert([
+        DB::table('nilaipeserta')->insert([
             'NoPeserta' => $request->NoPeserta,
             'NilaiTeori' => $NilaiTeori,
             'NilaiPraktek' => $NilaiPraktek,

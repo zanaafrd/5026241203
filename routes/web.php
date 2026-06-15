@@ -98,8 +98,8 @@ Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'create
 Route::post('/keranjangbelanja', [KeranjangBelanjaController::class, 'store'])->name('keranjangbelanja.store');
 Route::delete('/keranjangbelanja/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjangbelanja.destroy');
 
-//nilai pesert
+//nilai peserta
 //EAS
 Route::get('/nilaipeserta', [NilaiPesertaController::class, 'index'])->name('nilaipeserta.index');
-Route::get('/nilaipeserta/tambah', [NilaiPesertaController::class, 'tambah'])->name('nilaipeserta.create');
+Route::get('/nilaipeserta/create', [NilaiPesertaController::class, 'create'])->name('nilaipeserta.create');
 Route::post('/nilaipeserta/store', [NilaiPesertaController::class, 'store'])->name('nilaipeserta.store');
